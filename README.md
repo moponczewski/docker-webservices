@@ -11,21 +11,21 @@ What else...
 - the images are all equal (same tools installed), for productive environments use only the minimum set of installed tools
 - as cowsay is a commandline tool with ascii output it looks not that nice in a web browswer, use curl instead
 
-## 1) GET THE CODE 
+## 1) Get the code
 Clone the git repo to your local machine
 `git clone https://github.com/moponczewski/docker-webservices`
 
 `cd` then into the directory and perform the following steps
 
-## 2) BUILD AND START 
-###### FROM SCRATCH
+## 2) Build and start 
+###### from scratch 
 docker-compose grabs the docker-compose.yml file and starts building the docker images, based on the Dockerfiles in each build directory, maps ports and volumes if necessary, names the image and containers and finally fires the containers. Due to not using the `-d` flag the combined output from all webservices will be displayed in the terminal window.  
 
 ```
 docker-compose up
 ```
 
-###### IN CASE OF CHANGES
+###### in case of changes
 If necessary to restart the containerized services remove the already existing containers first and start docker-compose with command `--build` to rebuild images and start the containers. 
 
 ```
@@ -33,7 +33,7 @@ docker ps -aq | xargs docker rm -f
 docker-compose up --build
 ```
 
-## 3) FINALLY LET IT WORK
+## 3) Finally let it work
 
 docker-compose has been started not daemonized/ detached, so use curl in a separate terminal 
 
