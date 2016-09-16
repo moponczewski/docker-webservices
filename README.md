@@ -13,7 +13,8 @@ What else...
 ## 1) Get the code
 Clone the git repo to your local machine
 `$ git clone https://github.com/moponczewski/docker-webservices`
-the `cd` into the directory and perform the following steps
+
+`cd` then into the directory and perform the following steps
 
 ## 2) Build and start... 
 ###### ...from scratch 
