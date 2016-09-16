@@ -1,13 +1,13 @@
 # docker-webservices 
 
-Three webservices, each running in a docker container, doing a whalesay with startrek quote.
+Dockerized webservices, doing whalesays!
 
 This is a short and simple demo of interacting containerized webservices each located in a docker container and connected through a local docker network, running on one docker host. The "cow-webservice" is outputting a whalesay (a modified cowsay) quote of combined output from the "date-webservice" and the "fortune-webservice" (using StarTrek quotes).
-All webservices are created with the Flask microframework for Python (http://flask.pocoo.org/docs/0.11/license/), credits to the docker team for the docker.cow file used in the cow-webservice.
+All webservices are created with the [Flask](https://flask.pocoo.org/docs/0.11/license/ "Flask license"") microframework for Python, credits to the docker team for the docker.cow file used in the cow-webservice.
 
 What else...
 - docker and docker-compose are necessary (tested with docker v1.12.1 and docker-compose v1.8.0)
-- the docker images are based on Ubuntu 16.04 (fortune & cowsay) and Alpine Linux (date)
+- the docker images are based on Ubuntu 16.04 (fortune & cowsay) and [Alpine Linux](https://alpinelinux.org/ "Alpine Linux") (date)
 - as cowsay is a commandline tool with ascii output it looks not that nice in a web browswer, use curl instead
 
 ## 1) Get the code
@@ -67,10 +67,8 @@ $ curl localhost/cow
 
 
 It is also possible to query the containerized webservices directly, use
-```curl localhost:5001``` to query the fortune webservice or
-```curl localhost:5001``` to query the date webservice
-
-
+`$ curl localhost:5001` to query the fortune webservice or
+`$ curl localhost:5002` to query the date webservice
 
 
 Have fun! 
