@@ -7,38 +7,36 @@ All webservices are created with the Flask microframework for Python (http://fla
 
 What else...
 - docker and docker-compose are necessary (tested with docker v1.12.1 and docker-compose v1.8.0)
-- all docker images are built on Ubuntu 16.04
-- the images are all equal (same tools installed), for productive environments use only the minimum set of installed tools
+- the docker images are based on Ubuntu 16.04 (fortune & cowsay) and Alpine Linux (date)
 - as cowsay is a commandline tool with ascii output it looks not that nice in a web browswer, use curl instead
 
 ## 1) Get the code
 Clone the git repo to your local machine
-`git clone https://github.com/moponczewski/docker-webservices`
+`$ git clone https://github.com/moponczewski/docker-webservices`
+the `cd` into the directory and perform the following steps
 
-`cd` then into the directory and perform the following steps
-
-## 2) Build and start 
-###### from scratch 
+## 2) Build and start... 
+###### ...from scratch 
 docker-compose grabs the docker-compose.yml file and starts building the docker images, based on the Dockerfiles in each build directory, maps ports and volumes if necessary, names the image and containers and finally fires the containers. Due to not using the `-d` flag the combined output from all webservices will be displayed in the terminal window.  
 
 ```
-docker-compose up
+$ docker-compose up
 ```
 
-###### in case of changes
+###### ...in case of changes
 If necessary to restart the containerized services remove the already existing containers first and start docker-compose with command `--build` to rebuild images and start the containers. 
 
 ```
-docker ps -aq | xargs docker rm -f
-docker-compose up --build
+$ docker ps -aq | xargs docker rm -f
+$ docker-compose up --build
 ```
 
-## 3) Finally let it work
+## 3) Finally let it run
 
-docker-compose has been started not daemonized/ detached, so use curl in a separate terminal 
+$ docker-compose has been started not daemonized/ detached, so use curl in a separate terminal 
 
 ```
-curl localhost/cow
+$ curl localhost/cow
 ```
 
 
