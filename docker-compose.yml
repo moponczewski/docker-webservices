@@ -2,21 +2,21 @@ version: '2'
 services:
 
   cow:
-    build: ./ws-cow
+    build: ./src/ws-cow
     image: cow-ws
     container_name: cowcon
     ports:
     - "80:5000"
 
   fortune:
-    build: ./ws-fort
+    build: ./src/ws-fort
     image: fortune-ws
     container_name: fortcon
     ports:
     - "5001:5000"
 
   date:
-    build: ./ws-date
+    build: ./src/ws-date
     image: date-ws
     container_name: datecon
     ports:
