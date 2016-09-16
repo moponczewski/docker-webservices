@@ -1,17 +1,19 @@
-FROM alpine:latest
-MAINTAINER moponczewski "markus@oponczewski.de"
+FROM ubuntu:latest
+MAINTAINER moponczewski
+RUN apt-get update -y && apt-get install -y \
+    python-pip \
+    python-dev \
+    build-essential \
+    fortunes \
+    cowsay \
+    curl \
+    iputils-ping
+
+RUN apt-get clean
 
 COPY . /app
 WORKDIR /app
-
-RUN apk add --update \
-		python \
-		python-dev \
-		py-pip \
-		build-base \
-		fortune \
-	&& pip install -r requirements.txt 
-
-
+RUN pip install -r requirements.txt
 ENTRYPOINT ["python"]
-CMD ["date-app.py"]
+
+CMD ["fort-app.py"]

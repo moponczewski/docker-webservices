@@ -66,5 +66,11 @@ $ curl localhost/cow
 </pre>
 
 
+It is also possible to query the containerized webservices directly, use
+```curl localhost:5001``` to query the fortune webservice or
+```curl localhost:5001``` to query the date webservice
+
+
+
 
 Have fun! 

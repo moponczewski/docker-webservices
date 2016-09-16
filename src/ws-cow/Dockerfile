@@ -1,5 +1,5 @@
 FROM ubuntu:latest
-MAINTAINER moponczewski "markus@oponczewski.de"
+MAINTAINER moponczewski
 RUN apt-get update -y && apt-get install -y \
     python-pip \
     python-dev \
