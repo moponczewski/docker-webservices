@@ -1,8 +1,8 @@
 # docker-webservices 
 
-Three webservices, each running in a docker container, doing nothing more than a whalesay with startrek quote.
+Three webservices, each running in a docker container, doing a whalesay with startrek quote.
 
-This is a short and simple demo of interacting containerized webservices each located in a docker container and connected through a local docker network, running on one docker host. The "cow-webservice" is outputting a whalesay (which is a modified cowsay) quote of combined output from the "date-webservice" and the "fortune-webservice" (using StarTrek quotes).
+This is a short and simple demo of interacting containerized webservices each located in a docker container and connected through a local docker network, running on one docker host. The "cow-webservice" is outputting a whalesay (a modified cowsay) quote of combined output from the "date-webservice" and the "fortune-webservice" (using StarTrek quotes).
 All webservices are created with the Flask microframework for Python (http://flask.pocoo.org/docs/0.11/license/), credits to the docker team for the docker.cow file used in the cow-webservice.
 
 What else...
@@ -34,7 +34,7 @@ $ docker-compose up --build
 
 ## 3) Finally let it run
 
-$ docker-compose has been started not daemonized/ detached, so use curl in a separate terminal 
+docker-compose has been started not daemonized/ detached, so use curl in a separate terminal 
 
 ```
 $ curl localhost/cow
