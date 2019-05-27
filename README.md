@@ -7,7 +7,7 @@ All webservices are created with the [Flask](https://flask.pocoo.org/docs/0.11/l
 
 What else...
 - docker and docker-compose are necessary (tested with docker v1.12.1 and docker-compose v1.8.0)
-- the docker images are based on Ubuntu 16.04 (fortune & cowsay) and [Alpine Linux](https://alpinelinux.org/ "Alpine Linux") (date)
+- the docker images are based on the latest Ubuntu (fortune & cowsay) and [Alpine Linux](https://alpinelinux.org/ "Alpine Linux") (date)
 - as cowsay is a commandline tool with ascii output it looks not that nice in a web browswer, use curl instead
 
 ## 1) Get the code
