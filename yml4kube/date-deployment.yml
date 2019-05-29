@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: &name datecon
+  name: *name
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: *name
+  template:
+    metadata:
+      labels:
+        app: *name
+    spec:
+      containers:
+      - image: moponczewski/dockdock:datews
+        name: *name
+        ports:
+        - containerPort: 5000
+      restartPolicy: Always

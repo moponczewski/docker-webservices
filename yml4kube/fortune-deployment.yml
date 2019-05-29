@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: &name fortcon
+  name: *name
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: *name
+  template:
+    metadata:
+      labels:
+        app: *name
+    spec:
+      containers:
+      - image: moponczewski/dockdock:fortws
+        name: *name
+        ports:
+        - containerPort: 5000
+      restartPolicy: Always
