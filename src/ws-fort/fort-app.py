@@ -7,10 +7,10 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def hello():
-	welcomestr="Welcome... This is the FORTUNE Webservice v0.1\n"
+	welcomestr="This is FORTUNE Webservice v0.1\n"
 	welcomestr+="Please use the following Urls:\n"
-	welcomestr+="/help - this makes nothing but senseless output\n"
-	welcomestr+="/dt - this returns date and time\n"
+	welcomestr+="/help - delivers nothing than senseless output\n"
+	welcomestr+="/dt - returns date and time\n"
 	welcomestr+="/fortune - returns a general quote\n"
 	welcomestr+="/fortune/startrek - returns a specific startrek quote\n"
 	welcomestr+="/fortune/people - returns a quote from famous people\n"
@@ -19,7 +19,7 @@ def hello():
 
 @app.route('/help', methods=['GET'])
 def help():
-	return "Cry for help baby... no one will hear you!\n\n"
+	return "The HELP!\n\n"
 
 @app.route('/dt', methods=['GET'])
 def datetime():
