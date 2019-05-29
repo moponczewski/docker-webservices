@@ -6,7 +6,7 @@ This is a short and simple demo of interacting containerized webservices each lo
 All webservices are created with the [Flask](https://flask.pocoo.org/docs/0.11/license/ "Flask license"") microframework for Python, credits to the docker team for the docker.cow file used in the cow-webservice.
 
 What else...
-- docker and docker-compose are necessary (tested with docker v1.12.1 and docker-compose v1.8.0)
+- docker and docker-compose are necessary (tested since docker v1.12.1 and docker-compose v1.8.0)
 - the docker images are based on the latest Ubuntu (fortune & cowsay) and [Alpine Linux](https://alpinelinux.org/ "Alpine Linux") (date)
 - as cowsay is a commandline tool with ascii output it looks not that nice in a web browswer, use curl instead
 
@@ -34,11 +34,23 @@ $ docker-compose up --build
 
 ## 3) Finally let it run
 
-docker-compose has been started not daemonized/ detached, so use curl in a separate terminal 
+docker-compose has been started not daemonized/ detached, so use curl fro the commandline or open it in a Browser
 
+To get common quotes from the commandline
 ```
-$ curl localhost/cow
+$ curl localhost:8080/cow
 ```
+to get quotes from StarTrek 
+```
+$ curl localhost:8080/star
+```
+or to get quotes from famous people 
+```
+$ curl localhost:8080/fame
+```
+
+
+
 
 
 
